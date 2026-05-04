@@ -29,7 +29,7 @@ import MediaAudioPlayer from "@/components/media/MediaAudioPlayer.vue"
   flex: 1;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 15vh;
+  padding-bottom: 5vh;
   min-height: calc(100vh - 50px);
   min-height: calc(100dvh - 50px);
 }

@@ -5,6 +5,8 @@
 
 # Audio Player. Amazon S3 + Web Audio API + P5.js
 
+https://mpthree-beta.vercel.app/
+
 A compact mp3 player with audio visualization using the Web Audio API and ThreeJS. This is a revamp of my [mp3playerp5](https://github.com/thorstensson/mp3playerp5)
 
 Now I will circle back to all audio players for some refactoring and turning at least two into progressive web app (PWA) but other private project is poking my attention at the moment, in between job hunting 24/7.

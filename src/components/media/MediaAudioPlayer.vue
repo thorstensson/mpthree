@@ -156,39 +156,41 @@ onMounted(() => {
         ref="audio-element"
         crossorigin="anonymous"
       ></audio>
-      <div class="player__controls">
-        <ChevronLeftIcon
-          @click="prevTrack"
-          class="player__controls__prev"
-          :class="{ 'player__controls__prev--end': !ifTrackPrev }"
-        >
-        </ChevronLeftIcon>
-        <PlayIcon
-          @click="togglePlay"
-          class="player__controls__play"
-          :class="{ 'player__controls__play--show': !isPlaying }"
-        />
-        <PauseIcon
-          @click="togglePlay"
-          class="player__controls__pause"
-          :class="{ 'player__controls__pause--show': isPlaying }"
-        />
-        <ChevronRightIcon
-          @click="nextTrack"
-          class="player__controls__next"
-          :class="{ 'player__controls__next--end': !ifTrackNext }"
-        >
-        </ChevronRightIcon>
-      </div>
-      <div class="player__info">
-        <span class="player__info__text"
-          >{{ playlist[trackIndex].artist }} -
-          {{
-            playlist[trackIndex].track
-              .replace(".mp3", "")
-              .replace(playlist[trackIndex].artist + " - ", "")
-          }}</span
-        >
+      <div class="player__glass">
+        <div class="player__controls">
+          <ChevronLeftIcon
+            @click="prevTrack"
+            class="player__controls__prev"
+            :class="{ 'player__controls__prev--end': !ifTrackPrev }"
+          >
+          </ChevronLeftIcon>
+          <PlayIcon
+            @click="togglePlay"
+            class="player__controls__play"
+            :class="{ 'player__controls__play--show': !isPlaying }"
+          />
+          <PauseIcon
+            @click="togglePlay"
+            class="player__controls__pause"
+            :class="{ 'player__controls__pause--show': isPlaying }"
+          />
+          <ChevronRightIcon
+            @click="nextTrack"
+            class="player__controls__next"
+            :class="{ 'player__controls__next--end': !ifTrackNext }"
+          >
+          </ChevronRightIcon>
+        </div>
+        <div class="player__info">
+          <span class="player__info__text"
+            >{{ playlist[trackIndex].artist }} -
+            {{
+              playlist[trackIndex].track
+                .replace(".mp3", "")
+                .replace(playlist[trackIndex].artist + " - ", "")
+            }}</span
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -209,6 +211,16 @@ body {
   overflow: hidden;
   overscroll-behavior: none;
   text-transform: uppercase;
+}
+
+.player__glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 
 .player__controls {

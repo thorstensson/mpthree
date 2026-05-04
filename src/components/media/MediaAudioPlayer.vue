@@ -214,7 +214,7 @@ body {
 }
 
 .player__glass {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -280,7 +280,7 @@ body {
 
   &__text {
     font-family: $sans-text;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
     color: #e6e6e6;
     letter-spacing: 0.5px;

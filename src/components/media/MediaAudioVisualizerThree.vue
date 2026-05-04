@@ -223,7 +223,7 @@ const initThree = () => {
       vColor = hsl2rgb(hue / 360.0, sat, light);
 
       // --- Alpha ---
-      float fadeIn = uPlaying > 0.5 ? 1.0 : 0.05;
+      float fadeIn = uPlaying > 0.5 ? 1.0 : 0.15;
       if (uPlaying > 0.5) {
         // Only visible during the spiral pass — fade in/out tight
         fadeIn = smoothstep(0.0, 0.15, st) * (1.0 - smoothstep(0.6, 0.9, st));

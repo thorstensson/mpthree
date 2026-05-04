@@ -3,7 +3,7 @@
 <br/>
 <br/>
 
-# Audio Player. Amazon S3 + Web Audio API + P5.js
+# Audio Player. Amazon S3 + Web Audio API + Three.JS
 
 https://mpthree-beta.vercel.app/
 

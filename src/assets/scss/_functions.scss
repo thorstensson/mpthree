@@ -1,0 +1,30 @@
+/**
+ * Changes contrast to offset font from similar background color
+ * From codepen https://codepen.io/dread-design/pen/dOGVXM
+ */
+
+@function isColorDark($color) {
+    /*Parse RGB by isolating each color*/
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+    /*Compute the perceptive luminance*/
+    $l: 1 - (0.299 * $red + 0.587 * $green + 0.114 * $blue) / 255;
+    @if ($l < 0.41) {
+        @return 600;
+    } @else {
+        @return 300;
+    }
+}
+
+/**
+ * Returns a CSS clamp function which resolves to $size-at-min-width when page width is
+ * below $min-width, $size-at-max-width when page width is above $max-width.
+ */
+
+@function clamp-calc($min-width, $max-width, $size-at-min-width, $size-at-max-width) {
+    $slope: ($size-at-max-width - $size-at-min-width) / ($max-width - $min-width);
+    $y-axis-intersection: -1 * $min-width * $slope + $size-at-min-width;
+    $return-value: clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
+    @return $return-value;
+}

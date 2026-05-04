@@ -1,15 +1,13 @@
 ![Static Badge](https://img.shields.io/badge/Composition%20API-orange)
 
-<img width="600" height="600" alt="Image" src="https://github.com/user-attachments/assets/7423f02e-fb37-4eda-82ed-86561f71123b" />
-
 <br/>
 <br/>
 
 # Audio Player. Amazon S3 + Web Audio API + P5.js
 
-A compact mp3 player with audio visualization using the Web Audio API and ThreeJS. This is a revamp of my https://github.com/thorstensson?tab=repositories
+A compact mp3 player with audio visualization using the Web Audio API and ThreeJS. This is a revamp of my [mp3playerp5](https://github.com/thorstensson/mp3playerp5)
 
-Now I will circle back to all audio players for some refactoring and turning at least two into progressive web app (PWA) but other private project is poking my attention at the moment.
+Now I will circle back to all audio players for some refactoring and turning at least two into progressive web app (PWA) but other private project is poking my attention at the moment, in between job hunting 24/7.
 
 :penguin: T.
 
